@@ -263,13 +263,16 @@ body {
 /* Skills Section */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .skill-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(15, 15, 15, 0.8);
   border: 1px solid rgba(0, 245, 255, 0.2);
   border-radius: 15px;
   padding: 2rem;
@@ -278,12 +281,30 @@ body {
   animation: slideUp 0.6s ease forwards;
   opacity: 0;
   transform: translateY(30px);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(255, 0, 255, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-card:hover::before {
+  opacity: 1;
 }
 
 .skill-card:hover {
   transform: translateY(-10px);
   border-color: #00f5ff;
-  box-shadow: 0 20px 40px rgba(0, 245, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 245, 255, 0.3);
 }
 
 @keyframes slideUp {
@@ -293,28 +314,41 @@ body {
   }
 }
 
+.skill-icon-wrapper {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
 .skill-icon {
   width: 50px;
   height: 50px;
-  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
 }
 
-.skill-shape {
-  fill: none;
-  stroke: #00f5ff;
-  stroke-width: 2;
-  animation: polygonRotate 4s linear infinite;
-}
-
-@keyframes polygonRotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.skill-card:hover .skill-icon {
+  transform: scale(1.1);
 }
 
 .skill-name {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: #ffffff;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.skill-description {
+  font-size: 0.85rem;
+  color: #aaaaaa;
+  position: relative;
+  z-index: 2;
+  line-height: 1.4;
 }
 
 /* Passion Section */

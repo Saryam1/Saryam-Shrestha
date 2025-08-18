@@ -5,6 +5,20 @@ export default function Hero({ isVisible }) {
   return (
     <section id="hero" className={`hero ${isVisible.hero ? 'animate-in' : ''}`}>
       <div className="hero-content">
+        <div className="hero-avatar">
+          <svg className="avatar-svg" viewBox="0 0 200 200">
+            <defs>
+              <linearGradient id="avatarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#00f5ff"/>
+                <stop offset="100%" stopColor="#ff00ff"/>
+              </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="90" fill="url(#avatarGradient)" className="avatar-circle"/>
+            <circle cx="80" cy="80" r="8" fill="#000"/>
+            <circle cx="120" cy="80" r="8" fill="#000"/>
+            <path d="M 70 120 Q 100 140 130 120" stroke="#000" strokeWidth="3" fill="none"/>
+          </svg>
+        </div>
         <div className="hero-text">
           <h1 className="hero-title">
             <span className="glowing-text">Saryam Shrestha</span>
@@ -26,20 +40,6 @@ export default function Hero({ isVisible }) {
               <span>Bhaktapur, Nepal</span>
             </div>
           </div>
-        </div>
-        <div className="hero-avatar">
-          <svg className="avatar-svg" viewBox="0 0 200 200">
-            <defs>
-              <linearGradient id="avatarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#00f5ff"/>
-                <stop offset="100%" stopColor="#ff00ff"/>
-              </linearGradient>
-            </defs>
-            <circle cx="100" cy="100" r="90" fill="url(#avatarGradient)" className="avatar-circle"/>
-            <circle cx="80" cy="80" r="8" fill="#000"/>
-            <circle cx="120" cy="80" r="8" fill="#000"/>
-            <path d="M 70 120 Q 100 140 130 120" stroke="#000" strokeWidth="3" fill="none"/>
-          </svg>
         </div>
       </div>
     </section>

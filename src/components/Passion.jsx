@@ -21,16 +21,31 @@ export default function Passion({ isVisible }) {
             </svg>
           </div>
           <div className="passion-text">
-            <h3 className="glowing-text">Pro Gaming</h3>
+            <h3 className="glowing-text">Pro Gaming & Web Development</h3>
             <p>
-              Gaming isn't just a hobby for me—it's my passion and future career goal. 
-              I'm dedicated to becoming a professional gamer, combining strategy, 
-              skill, and technology to compete at the highest level.
+              I have dual passions that drive me every day. Gaming isn't just a hobby—it's 
+              my future career goal where I combine strategy, skill, and technology to compete 
+              at the highest level. Alongside this, I'm deeply passionate about web development, 
+              creating beautiful, interactive websites and applications that solve real-world problems.
             </p>
+            <div className="passion-details">
+              <div className="passion-item">
+                <h4>🎮 Pro Gaming</h4>
+                <p>Competitive gaming with focus on strategy and skill development</p>
+              </div>
+              <div className="passion-item">
+                <h4>💻 Web Development</h4>
+                <p>Building modern, responsive websites and web applications</p>
+              </div>
+            </div>
             <div className="gaming-stats">
               <div className="stat">
                 <span className="stat-number">5+</span>
                 <span className="stat-label">Years Gaming</span>
+              </div>
+              <div className="stat">
+                <span className="stat-number">2+</span>
+                <span className="stat-label">Years Coding</span>
               </div>
               <div className="stat">
                 <span className="stat-number">∞</span>

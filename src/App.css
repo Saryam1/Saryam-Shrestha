@@ -407,6 +407,25 @@ body {
   margin-bottom: 2rem;
 }
 
+.passion-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.passion-item h4 {
+  color: #00f5ff;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.passion-item p {
+  font-size: 0.95rem;
+  color: #aaaaaa;
+  margin: 0;
+}
+
 .gaming-stats {
   display: flex;
   gap: 3rem;

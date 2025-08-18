@@ -13,8 +13,9 @@ export default function About({ isVisible }) {
             I'm in my Class 12 Technical program, building a strong foundation in programming and technology.
           </p>
           <p>
-            My journey combines academic excellence with my dream of becoming a professional gamer, 
-            merging my love for technology with competitive gaming.
+            My journey combines academic excellence with dual passions: becoming a professional gamer 
+            and mastering web development. I love creating interactive websites and applications, 
+            merging my technical skills with creative problem-solving and competitive gaming spirit.
           </p>
         </div>
       </div>

@@ -181,7 +181,7 @@ export default function App() {
                   {skill.name === 'C#' && '.NET framework applications'}
                 </div>
               </div>
-            ))}</div>
+            ))}
           </div>
         </div>
       </section>

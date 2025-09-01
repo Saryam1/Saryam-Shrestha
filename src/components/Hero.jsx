@@ -4,6 +4,26 @@ import React from 'react'
 export default function Hero({ isVisible }) {
   return (
     <section id="hero" className={`hero ${isVisible.hero ? 'animate-in' : ''}`}>
+      <div className="hero-bg-image">
+        <svg viewBox="0 0 400 300" className="hero-bg-svg">
+          <defs>
+            <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="rgba(0, 245, 255, 0.1)"/>
+              <stop offset="100%" stopColor="rgba(255, 0, 255, 0.1)"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="300" fill="url(#heroBg)"/>
+          <circle cx="100" cy="80" r="30" fill="rgba(0, 245, 255, 0.2)" opacity="0.6">
+            <animate attributeName="r" values="30;40;30" dur="4s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="300" cy="200" r="25" fill="rgba(255, 0, 255, 0.2)" opacity="0.5">
+            <animate attributeName="r" values="25;35;25" dur="3s" repeatCount="indefinite"/>
+          </circle>
+          <polygon points="200,50 220,90 180,90" fill="rgba(0, 245, 255, 0.15)">
+            <animateTransform attributeName="transform" type="rotate" values="0 200 70;360 200 70" dur="8s" repeatCount="indefinite"/>
+          </polygon>
+        </svg>
+      </div>
       <div className="hero-content">
         <div className="hero-avatar">
           <svg className="avatar-svg" viewBox="0 0 200 200">

@@ -7,7 +7,6 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Gallery from './components/Gallery'
 import Passion from './components/Passion'
-import School from './components/School'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -43,7 +42,6 @@ export default function App() {
       <Projects isVisible={isVisible} />
       <Gallery isVisible={isVisible} />
       <Passion isVisible={isVisible} />
-      <School isVisible={isVisible} />
       <Contact isVisible={isVisible} />
       <Footer />
     </div>

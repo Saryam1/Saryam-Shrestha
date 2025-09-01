@@ -1,8 +1,11 @@
 
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 export default function Gallery({ isVisible }) {
   const [activeCategory, setActiveCategory] = useState('all')
+  const galleryRef = useRef(null)
+  const [touchStart, setTouchStart] = useState(null)
+  const [touchEnd, setTouchEnd] = useState(null)
 
   const galleryItems = [
     {
@@ -60,6 +63,33 @@ export default function Gallery({ isVisible }) {
     ? galleryItems 
     : galleryItems.filter(item => item.category === activeCategory)
 
+  // Swipe functionality for mobile
+  const minSwipeDistance = 50
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX)
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > minSwipeDistance
+    const isRightSwipe = distance < -minSwipeDistance
+    
+    if (galleryRef.current && window.innerWidth <= 768) {
+      const scrollAmount = 300
+      if (isLeftSwipe) {
+        galleryRef.current.scrollLeft += scrollAmount
+      }
+      if (isRightSwipe) {
+        galleryRef.current.scrollLeft -= scrollAmount
+      }
+    }
+  }
+
   return (
     <section id="gallery" className={`section ${isVisible.gallery ? 'animate-in' : ''}`}>
       <div className="container">
@@ -78,7 +108,13 @@ export default function Gallery({ isVisible }) {
           ))}
         </div>
 
-        <div className="gallery-grid">
+        <div 
+          className="gallery-grid"
+          ref={galleryRef}
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
           {filteredItems.map((item, index) => (
             <div key={item.id} className="gallery-item" style={{animationDelay: `${index * 0.1}s`}}>
               <div className="gallery-card">

@@ -786,6 +786,29 @@ body {
   gap: 2rem;
 }
 
+/* Mobile Gallery Scrolling */
+@media (max-width: 768px) {
+  .gallery-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding: 0 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .gallery-grid::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .gallery-item {
+    flex: 0 0 280px;
+    scroll-snap-align: center;
+  }
+}
+
 .gallery-item {
   opacity: 0;
   transform: scale(0.9);
@@ -1220,7 +1243,8 @@ body {
   }
   
   .passion-content,
-  .contact-content {
+  .contact-content,
+  .school-content {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
@@ -1229,12 +1253,10 @@ body {
     grid-template-columns: 1fr;
   }
   
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-  
   .gallery-filters {
     gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   
   .filter-btn {
@@ -1243,8 +1265,30 @@ body {
   }
   
   .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .skill-card {
+    padding: 1rem;
+  }
+  
+  .skill-name {
+    font-size: 1rem;
+  }
+  
+  .skill-description {
+    font-size: 0.75rem;
+  }
+  
+  .skill-icon-wrapper {
+    height: 50px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skill-icon {
+    width: 40px;
+    height: 40px;
   }
   
   .mobile-menu-toggle {
@@ -1301,6 +1345,19 @@ body {
   .gaming-stats {
     justify-content: center;
   }
+  
+  .passion-details {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .section {
+    padding: 4rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1313,12 +1370,30 @@ body {
   }
   
   .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
   }
   
   .skill-card {
-    padding: 1.5rem;
+    padding: 0.8rem;
+  }
+  
+  .skill-name {
+    font-size: 0.9rem;
+  }
+  
+  .skill-description {
+    font-size: 0.7rem;
+  }
+  
+  .skill-icon-wrapper {
+    height: 40px;
+    margin-bottom: 0.3rem;
+  }
+  
+  .skill-icon {
+    width: 30px;
+    height: 30px;
   }
   
   .project-card {
@@ -1330,7 +1405,23 @@ body {
   }
   
   .gallery-filters {
-    flex-direction: column;
-    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .hero-content {
+    flex-direction: column-reverse;
+  }
+  
+  .nav {
+    padding: 0 1rem;
+  }
+  
+  .container {
+    padding: 0 0.5rem;
   }
 }

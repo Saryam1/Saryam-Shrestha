@@ -1231,6 +1231,7 @@ body {
 @media (max-width: 768px) {
   .hero-content {
     gap: 2rem;
+    flex-direction: column;
   }
   
   .hero-title {
@@ -1250,7 +1251,8 @@ body {
   }
   
   .projects-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
   
   .gallery-filters {
@@ -1397,7 +1399,21 @@ body {
   }
   
   .project-card {
-    padding: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .project-title {
+    font-size: 1.2rem;
+  }
+  
+  .project-description {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
   }
   
   .contact-form-wrapper {

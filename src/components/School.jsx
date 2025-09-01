@@ -25,7 +25,7 @@ export default function School({ isVisible }) {
           </div>
           <div className="school-iframe">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.123456789!2d85.4123456!3d27.6789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAdarsha%20Secondary%20School!5e0!3m2!1sen!2snp!4v1234567890"
+              src="https://www.google.com/maps/place/Adarsha+Secondary+School,+Madhyapur+Thimi+Muncipality+44600/@27.6805032,85.3753458,18.25z/data=!4m6!3m5!1s0x39eb1a6ada9ef59f:0x1ceb33d394a77335!8m2!3d27.6815007!4d85.376109!16s%2Fg%2F11b8tcpdlg?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
               width="100%"
               height="300"
               style={{border: 0}}

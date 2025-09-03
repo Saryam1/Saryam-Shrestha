@@ -131,11 +131,12 @@ body {
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   background: radial-gradient(circle at 50% 50%, rgba(0, 245, 255, 0.1) 0%, rgba(255, 0, 255, 0.1) 50%, transparent 100%);
   position: relative;
   overflow: hidden;
+  padding-top: 80px;
 }
 
 .hero-bg-image {
@@ -174,9 +175,9 @@ body {
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   max-width: 1200px;
-  padding: 0 2rem;
+  padding: 6rem 2rem 2rem;
   align-items: center;
   text-align: center;
   position: relative;
@@ -1206,8 +1207,9 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-content {
-    gap: 2rem;
+    gap: 1.5rem;
     flex-direction: column;
+    padding: 5rem 1rem 2rem;
   }
 
   .hero-title {

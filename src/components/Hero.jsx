@@ -44,7 +44,7 @@ export default function Hero({ isVisible }) {
             <span className="glowing-text">Saryam Shrestha</span>
           </h1>
           <p className="hero-subtitle">
-            17-year-old Computer Engineering Student, Web Developer & A spiring Pro Gamer
+            17-year-old Computer Engineering Student, Web Developer & Aspiring Pro Gamer
           </p>
           <div className="hero-details">
             <div className="detail-item">

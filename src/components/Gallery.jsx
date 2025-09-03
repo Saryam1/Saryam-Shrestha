@@ -9,67 +9,67 @@ export default function Gallery({ isVisible }) {
   const galleryItems = [
     {
       id: 1,
-      title: "Heritage Site Visit",
-      description: "Exploring Nepal's beautiful cultural heritage",
+      title: "Casual Outdoor",
+      description: "Enjoying the outdoors with a casual vibe",
       category: "personal",
       type: "image",
-      src: "/assets/saryam-casual-heritage.jpg"
+      src: "/assets/saryam-casual-outdoor.jpg"
     },
     {
       id: 2,
-      title: "Creative Portrait",
-      description: "Artistic black and white photography session",
-      category: "personal",
+      title: "Gaming Setup",
+      description: "My gaming and development workspace",
+      category: "professional",
       type: "image",
-      src: "/assets/saryam-portrait-bw.jpg"
+      src: "/assets/saryam-gaming-setup.jpg"
     },
     {
       id: 3,
-      title: "Mountain Adventure",
-      description: "Enjoying the scenic beauty of Nepal's mountains",
-      category: "personal",
+      title: "Study Environment",
+      description: "Where I code and study computer engineering",
+      category: "professional",
       type: "image",
-      src: "/assets/saryam-mountain-view.jpg"
+      src: "/assets/saryam-study-desk.jpg"
     },
     {
       id: 4,
-      title: "Formal Occasions",
-      description: "Professional photo at an elegant venue",
+      title: "School Days",
+      description: "In my school uniform during academic hours",
       category: "professional",
       type: "image",
-      src: "/assets/saryam-formal-hotel.jpg"
+      src: "/assets/saryam-school-uniform.jpg"
     },
     {
       id: 5,
-      title: "Daily Life",
-      description: "Casual moments and everyday adventures",
+      title: "Creative Portrait",
+      description: "Artistic photography session with creative poses",
       category: "personal",
       type: "image",
-      src: "/assets/saryam-selfie-sky.jpg"
+      src: "/assets/saryam-creative-pose.jpg"
     },
     {
       id: 6,
-      title: "Family Time",
-      description: "Spending quality time with family at home",
-      category: "personal",
+      title: "Formal Portrait",
+      description: "Professional headshot for formal occasions",
+      category: "professional",
       type: "image",
-      src: "/assets/saryam-family-home.jpg"
+      src: "/assets/saryam-formal-portrait.jpg"
     },
     {
       id: 7,
-      title: "Adventure Biking",
-      description: "Motorcycle adventures in Nepal's terrain",
-      category: "adventure",
+      title: "Casual Moments",
+      description: "Relaxed moments with a genuine smile",
+      category: "personal",
       type: "image",
-      src: "/assets/saryam-adventure-bike.jpg"
+      src: "/assets/saryam-casual-smile.jpg"
     },
     {
       id: 8,
-      title: "Cable Car Journey",
-      description: "Scenic cable car ride with mountain views",
-      category: "adventure",
+      title: "Main Profile",
+      description: "My main profile photo for social media",
+      category: "personal",
       type: "image",
-      src: "/assets/saryam-cable-car.jpg"
+      src: "/assets/saryam-profile-main.jpg"
     }
   ]
 

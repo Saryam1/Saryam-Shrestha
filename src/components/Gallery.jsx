@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react'
 
 export default function Gallery({ isVisible }) {
@@ -10,57 +9,79 @@ export default function Gallery({ isVisible }) {
   const galleryItems = [
     {
       id: 1,
-      title: "Gaming Setup",
-      category: "gaming",
+      title: "Heritage Site Visit",
+      description: "Exploring Nepal's beautiful cultural heritage",
+      category: "personal",
       type: "image",
-      description: "My professional gaming setup for competitive play"
+      src: "/assets/saryam-casual-heritage.jpg"
     },
     {
       id: 2,
-      title: "Code Project Demo",
-      category: "coding",
-      type: "video",
-      description: "Live demonstration of my latest web application"
+      title: "Creative Portrait",
+      description: "Artistic black and white photography session",
+      category: "personal",
+      type: "image",
+      src: "/assets/saryam-portrait-bw.jpg"
     },
     {
       id: 3,
-      title: "Tournament Victory",
-      category: "gaming",
+      title: "Mountain Adventure",
+      description: "Enjoying the scenic beauty of Nepal's mountains",
+      category: "personal",
       type: "image",
-      description: "Winning moment from recent esports competition"
+      src: "/assets/saryam-mountain-view.jpg"
     },
     {
       id: 4,
-      title: "Programming Workspace",
-      category: "coding",
+      title: "Formal Occasions",
+      description: "Professional photo at an elegant venue",
+      category: "professional",
       type: "image",
-      description: "My development environment and coding setup"
+      src: "/assets/saryam-formal-hotel.jpg"
     },
     {
       id: 5,
-      title: "School Project Presentation",
-      category: "academic",
-      type: "video",
-      description: "Presenting my computer engineering project"
+      title: "Daily Life",
+      description: "Casual moments and everyday adventures",
+      category: "personal",
+      type: "image",
+      src: "/assets/saryam-selfie-sky.jpg"
     },
     {
       id: 6,
-      title: "Team Building",
-      category: "academic",
+      title: "Family Time",
+      description: "Spending quality time with family at home",
+      category: "personal",
       type: "image",
-      description: "Working with classmates on group projects"
+      src: "/assets/saryam-family-home.jpg"
+    },
+    {
+      id: 7,
+      title: "Adventure Biking",
+      description: "Motorcycle adventures in Nepal's terrain",
+      category: "adventure",
+      type: "image",
+      src: "/assets/saryam-adventure-bike.jpg"
+    },
+    {
+      id: 8,
+      title: "Cable Car Journey",
+      description: "Scenic cable car ride with mountain views",
+      category: "adventure",
+      type: "image",
+      src: "/assets/saryam-cable-car.jpg"
     }
   ]
 
   const categories = [
     { id: 'all', name: 'All', icon: '⚡' },
-    { id: 'gaming', name: 'Gaming', icon: '🎮' },
-    { id: 'coding', name: 'Coding', icon: '💻' },
-    { id: 'academic', name: 'Academic', icon: '🎓' }
+    { id: 'personal', name: 'Personal', icon: '📸' },
+    { id: 'professional', name: 'Professional', icon: '👔' },
+    { id: 'adventure', name: 'Adventure', icon: '🏔️' }
   ]
 
-  const filteredItems = activeCategory === 'all' 
-    ? galleryItems 
+  const filteredItems = activeCategory === 'all'
+    ? galleryItems
     : galleryItems.filter(item => item.category === activeCategory)
 
   // Swipe functionality for mobile
@@ -78,7 +99,7 @@ export default function Gallery({ isVisible }) {
     const distance = touchStart - touchEnd
     const isLeftSwipe = distance > minSwipeDistance
     const isRightSwipe = distance < -minSwipeDistance
-    
+
     if (galleryRef.current && window.innerWidth <= 768) {
       const scrollAmount = 300
       if (isLeftSwipe) {
@@ -94,7 +115,7 @@ export default function Gallery({ isVisible }) {
     <section id="gallery" className={`section ${isVisible.gallery ? 'animate-in' : ''}`}>
       <div className="container">
         <h2 className="section-title">Gallery</h2>
-        
+
         <div className="gallery-filters">
           {categories.map(category => (
             <button
@@ -108,7 +129,7 @@ export default function Gallery({ isVisible }) {
           ))}
         </div>
 
-        <div 
+        <div
           className="gallery-grid"
           ref={galleryRef}
           onTouchStart={onTouchStart}
@@ -116,25 +137,37 @@ export default function Gallery({ isVisible }) {
           onTouchEnd={onTouchEnd}
         >
           {filteredItems.map((item, index) => (
-            <div key={item.id} className="gallery-item" style={{animationDelay: `${index * 0.1}s`}}>
+            <div key={item.id} className="gallery-item" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="gallery-card">
                 <div className="gallery-media">
                   {item.type === 'video' ? (
                     <div className="video-placeholder">
-                      <svg viewBox="0 0 100 100" className="play-icon">
-                        <circle cx="50" cy="50" r="35" className="play-circle"/>
-                        <polygon points="40,35 40,65 70,50" className="play-triangle"/>
+                      <svg className="play-icon" viewBox="0 0 80 80">
+                        <circle cx="40" cy="40" r="35" className="play-circle" />
+                        <polygon points="32,28 32,52 56,40" className="play-triangle" />
                       </svg>
-                      <span className="video-label">Video</span>
+                      <span className="video-label">Video Content</span>
                     </div>
+                  ) : item.src ? (
+                    <img
+                      src={item.src}
+                      alt={item.title}
+                      className="gallery-image"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        borderRadius: '0'
+                      }}
+                    />
                   ) : (
                     <div className="image-placeholder">
-                      <svg viewBox="0 0 100 100" className="image-icon">
-                        <rect x="15" y="25" width="70" height="50" rx="5" className="image-frame"/>
-                        <circle cx="35" cy="40" r="8" className="image-element"/>
-                        <polygon points="50,55 65,40 80,55 80,65 50,65" className="image-element"/>
+                      <svg className="image-icon" viewBox="0 0 80 80">
+                        <rect x="10" y="20" width="60" height="40" rx="5" className="image-frame" />
+                        <circle cx="30" cy="35" r="5" className="image-element" />
+                        <polygon points="45,45 55,35 65,45 65,55 45,55" className="image-element" />
                       </svg>
-                      <span className="image-label">Image</span>
+                      <span className="image-label">Image Content</span>
                     </div>
                   )}
                 </div>

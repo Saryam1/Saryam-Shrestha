@@ -9,16 +9,16 @@ export default function Gallery({ isVisible }) {
   const galleryItems = [
     {
       id: 1,
-      title: "Casual Outdoor",
-      description: "Enjoying the outdoors with a casual vibe",
+      title: "Main Profile",
+      description: "My main profile photo showcasing my personality",
       category: "personal",
       type: "image",
-      src: "/assets/saryam-casual-outdoor.jpg"
+      src: "/assets/saryam-profile-main.jpg"
     },
     {
       id: 2,
       title: "Gaming Setup",
-      description: "My gaming and development workspace",
+      description: "My gaming and development workspace where I create and play",
       category: "professional",
       type: "image",
       src: "/assets/saryam-gaming-setup.jpg"
@@ -33,51 +33,34 @@ export default function Gallery({ isVisible }) {
     },
     {
       id: 4,
-      title: "School Days",
-      description: "In my school uniform during academic hours",
+      title: "School Life",
+      description: "Academic life at Adarsha Secondary School",
       category: "professional",
       type: "image",
       src: "/assets/saryam-school-uniform.jpg"
     },
     {
       id: 5,
-      title: "Creative Portrait",
-      description: "Artistic photography session with creative poses",
+      title: "Creative Side",
+      description: "Exploring my artistic and creative expressions",
       category: "personal",
       type: "image",
       src: "/assets/saryam-creative-pose.jpg"
     },
     {
       id: 6,
-      title: "Formal Portrait",
-      description: "Professional headshot for formal occasions",
+      title: "Professional Portrait",
+      description: "Formal headshot for professional networking",
       category: "professional",
       type: "image",
       src: "/assets/saryam-formal-portrait.jpg"
-    },
-    {
-      id: 7,
-      title: "Casual Moments",
-      description: "Relaxed moments with a genuine smile",
-      category: "personal",
-      type: "image",
-      src: "/assets/saryam-casual-smile.jpg"
-    },
-    {
-      id: 8,
-      title: "Main Profile",
-      description: "My main profile photo for social media",
-      category: "personal",
-      type: "image",
-      src: "/assets/saryam-profile-main.jpg"
     }
   ]
 
   const categories = [
     { id: 'all', name: 'All', icon: '⚡' },
     { id: 'personal', name: 'Personal', icon: '📸' },
-    { id: 'professional', name: 'Professional', icon: '👔' },
-    { id: 'adventure', name: 'Adventure', icon: '🏔️' }
+    { id: 'professional', name: 'Professional', icon: '👔' }
   ]
 
   const filteredItems = activeCategory === 'all'

@@ -20,3 +20,15 @@ externalPort = 80
 
 [agent]
 expertMode = true
+
+[workflows]
+runButton = "Portfolio Dev Server"
+
+[[workflows.workflow]]
+name = "Portfolio Dev Server"
+author = 47195508
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"

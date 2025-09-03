@@ -250,7 +250,18 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
+  border: 3px solid rgba(0, 245, 255, 0.5);
+  filter: brightness(1.1) contrast(1.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.3), 
+              inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.hero-profile-image:hover {
+  border-color: rgba(0, 245, 255, 0.8);
+  box-shadow: 0 0 40px rgba(0, 245, 255, 0.5), 
+              inset 0 0 30px rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
 }
 
 .avatar-svg {

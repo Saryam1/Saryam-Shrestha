@@ -8,22 +8,6 @@ export default function Gallery({ isVisible }) {
 
   const galleryItems = [
     {
-      id: 1,
-      title: "Main Profile",
-      description: "My main profile photo showcasing my personality",
-      category: "personal",
-      type: "image",
-      src: "/assets/saryam-profile-main.jpg"
-    },
-    {
-      id: 2,
-      title: "Gaming Setup",
-      description: "My gaming and development workspace where I create and play",
-      category: "professional",
-      type: "image",
-      src: "/assets/saryam-gaming-setup.jpg"
-    },
-    {
       id: 3,
       title: "Study Environment",
       description: "Where I code and study computer engineering",

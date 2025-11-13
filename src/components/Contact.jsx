@@ -52,8 +52,8 @@ export default function Contact({ isVisible }) {
         </svg>
       ),
       label: 'GitHub',
-      value: 'github.com/saryam',
-      link: '#'
+      value: 'github.com/Saryam1put',
+      link: 'https://github.com/Saryam1put'
     },
     {
       icon: (

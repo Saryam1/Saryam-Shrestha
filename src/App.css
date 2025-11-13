@@ -1,7 +1,7 @@
 :root {
-  --color-purple-primary: #8b5cf6;
-  --color-purple-light: #a78bfa;
-  --color-purple-lighter: #d8b4fe;
+  --color-purple-primary: #0080ff;
+  --color-purple-light: #0099ff;
+  --color-purple-lighter: #00b3ff;
   --color-black: #000000;
   --color-white: #ffffff;
 }
@@ -14,8 +14,8 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #0f1419;
-  color: #e4e6eb;
+  background: #000000;
+  color: #ffffff;
   overflow-x: hidden;
 }
 
@@ -28,11 +28,11 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(15, 20, 25, 0.95);
+  background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
   z-index: 1000;
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(100, 115, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 128, 255, 0.3);
 }
 
 .nav {
@@ -50,7 +50,7 @@ body {
   gap: 1rem;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #6c7aff;
+  color: #0080ff;
 }
 
 .logo-icon {
@@ -91,7 +91,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #6c7aff;
+  color: #0080ff;
 }
 
 .nav-links a::after {
@@ -101,7 +101,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: #6c7aff;
+  background: #0080ff;
   transition: width 0.3s ease;
 }
 
@@ -119,7 +119,7 @@ body {
 .hamburger-line {
   width: 25px;
   height: 3px;
-  background: #6c7aff;
+  background: #0080ff;
   transition: all 0.3s ease;
 }
 
@@ -162,8 +162,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(139, 92, 246, 0.15), transparent 50%),
-              radial-gradient(circle at 70% 50%, rgba(168, 85, 247, 0.1), transparent 50%);
+  background: radial-gradient(circle at 30% 50%, rgba(0, 128, 255, 0.2), transparent 50%),
+              radial-gradient(circle at 70% 50%, rgba(0, 153, 255, 0.15), transparent 50%);
   pointer-events: none;
 }
 
@@ -187,15 +187,15 @@ body {
   height: 200px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid var(--color-purple-primary);
-  box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+  border: 3px solid #0080ff;
+  box-shadow: 0 0 30px rgba(0, 128, 255, 0.5);
   transition: all 0.3s ease;
 }
 
 .hero-image-container:hover {
   transform: scale(1.05);
-  border-color: var(--color-purple-light);
-  box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+  border-color: #0099ff;
+  box-shadow: 0 0 40px rgba(0, 128, 255, 0.7);
 }
 
 .hero-profile-image {
@@ -282,7 +282,7 @@ body {
   transform: translateX(-50%);
   width: 100px;
   height: 3px;
-  background: linear-gradient(90deg, #6c7aff, #8b5cf6);
+  background: linear-gradient(90deg, #0080ff, #00b3ff);
   border-radius: 2px;
 }
 
@@ -335,8 +335,8 @@ body {
 }
 
 .skill-card {
-  background: #1a1f2e;
-  border: 1px solid #2d3748;
+  background: #000000;
+  border: 1px solid rgba(0, 128, 255, 0.3);
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
@@ -355,7 +355,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(108, 122, 255, 0.05), rgba(139, 92, 246, 0.05));
+  background: linear-gradient(135deg, rgba(0, 128, 255, 0.08), rgba(0, 179, 255, 0.05));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -366,8 +366,8 @@ body {
 
 .skill-card:hover {
   transform: translateY(-10px);
-  border-color: #4a5568;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: #0080ff;
+  box-shadow: 0 20px 40px rgba(0, 128, 255, 0.3);
 }
 
 @keyframes slideUp {
@@ -600,8 +600,8 @@ body {
 }
 
 .project-card {
-  background: #1a1f2e;
-  border: 1px solid #2d3748;
+  background: #000000;
+  border: 1px solid rgba(0, 128, 255, 0.3);
   border-radius: 12px;
   padding: 1.75rem;
   transition: all 0.3s ease;
@@ -615,8 +615,8 @@ body {
 
 .project-card:hover {
   transform: translateY(-5px);
-  border-color: #4a5568;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: #0080ff;
+  box-shadow: 0 10px 30px rgba(0, 128, 255, 0.3);
 }
 
 .project-header {
@@ -721,21 +721,21 @@ body {
 }
 
 .code-btn:hover {
-  background: #2d3748;
-  border-color: #6c7aff;
-  color: #6c7aff;
+  background: rgba(0, 128, 255, 0.1);
+  border-color: #0080ff;
+  color: #0080ff;
 }
 
 .demo-btn {
   background: transparent;
-  color: #e4e6eb;
-  border: 1px solid #4a5568;
+  color: #ffffff;
+  border: 1px solid rgba(0, 128, 255, 0.3);
 }
 
 .demo-btn:hover {
-  background: #2d3748;
-  border-color: #ef4444;
-  color: #ef4444;
+  background: rgba(0, 128, 255, 0.1);
+  border-color: #0080ff;
+  color: #0080ff;
 }
 
 .projects-footer {
@@ -1168,9 +1168,9 @@ body {
 
 /* Footer */
 .footer {
-  background: #0a0e14;
+  background: #000000;
   padding: 3rem 0 1.5rem;
-  border-top: 1px solid #2d3748;
+  border-top: 1px solid rgba(0, 128, 255, 0.3);
   position: relative;
 }
 
@@ -1181,7 +1181,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(108, 122, 255, 0.02), rgba(139, 92, 246, 0.02));
+  background: linear-gradient(135deg, rgba(0, 128, 255, 0.03), rgba(0, 179, 255, 0.02));
   pointer-events: none;
 }
 
@@ -1202,9 +1202,9 @@ body {
 .footer-name {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #6c7aff;
+  color: #0080ff;
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, #6c7aff, #8b5cf6);
+  background: linear-gradient(45deg, #0080ff, #00b3ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1238,7 +1238,7 @@ body {
 }
 
 .footer-links a:hover {
-  color: #6c7aff;
+  color: #0080ff;
   transform: translateX(5px);
 }
 
@@ -1253,24 +1253,24 @@ body {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: rgba(108, 122, 255, 0.1);
-  border: 1px solid rgba(108, 122, 255, 0.2);
+  background: rgba(0, 128, 255, 0.1);
+  border: 1px solid rgba(0, 128, 255, 0.3);
   border-radius: 8px;
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .social-link:hover {
-  background: rgba(108, 122, 255, 0.2);
-  border-color: #6c7aff;
+  background: rgba(0, 128, 255, 0.2);
+  border-color: #0080ff;
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 245, 255, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 128, 255, 0.3);
 }
 
 .social-icon {
   width: 20px;
   height: 20px;
-  fill: #00f5ff;
+  fill: #0080ff;
   transition: fill 0.3s ease;
 }
 

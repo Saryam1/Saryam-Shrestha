@@ -69,10 +69,6 @@ export default function Projects({ isVisible }) {
             </div>
           ))}
         </div>
-        <div className="projects-footer">
-          <p className="more-text">More projects coming soon...</p>
-          <button className="view-all-btn">View All Projects</button>
-        </div>
       </div>
     </section>
   )

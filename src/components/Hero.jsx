@@ -7,7 +7,7 @@ export default function Hero({ isVisible }) {
         <div className="hero-avatar">
           <div className="hero-image-container">
             <img 
-              src="/assets/saryam-profile.jpg" 
+              src="/assets/saryam-profile-new.jpg" 
               alt="Saryam Shrestha - Computer Engineering Student and Pro Gamer" 
               className="hero-profile-image"
             />

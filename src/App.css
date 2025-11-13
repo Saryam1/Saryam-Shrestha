@@ -103,7 +103,7 @@ body {
   align-items: center;
   justify-content: center;
   background: var(--color-background);
-  padding: 80px 2rem 2rem;
+  padding: 80px 2rem 0;
 }
 
 .hero-content {
@@ -177,7 +177,11 @@ body {
 
 /* Section Styles */
 .section {
-  padding: 6rem 0;
+  padding: 4rem 0;
+}
+
+.section:first-of-type {
+  padding-top: 2rem;
 }
 
 .container {

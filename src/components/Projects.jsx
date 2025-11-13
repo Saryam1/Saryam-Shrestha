@@ -5,75 +5,73 @@ export default function Projects({ isVisible }) {
   const projects = [
     {
       id: 1,
-      title: "Gaming Portfolio Website",
-      description: "A responsive portfolio website showcasing my gaming achievements and web development skills, built with React and modern CSS animations.",
-      technologies: ["React", "CSS3", "JavaScript", "Responsive Design"],
+      title: "Calculator Application",
+      description: "A simple calculator built with C++ demonstrating basic programming concepts and user interface design.",
+      technologies: ["C++", "Object-Oriented Programming"],
       status: "Completed",
-      category: "Web Development"
+      codeLink: "#",
+      demoLink: "#"
     },
     {
       id: 2,
-      title: "Game Performance Tracker",
-      description: "A desktop application to track gaming statistics, performance metrics, and improvement over time for competitive gaming.",
-      technologies: ["Python", "Tkinter", "SQLite", "Data Visualization"],
+      title: "Student Management System",
+      description: "A console-based application for managing student records using fundamental programming concepts.",
+      technologies: ["C Programming", "File Handling"],
       status: "In Progress",
-      category: "Desktop Application"
+      codeLink: "#",
+      demoLink: "#"
     },
     {
       id: 3,
-      title: "School Management System",
-      description: "A comprehensive system for managing student records, grades, and attendance for educational institutions.",
-      technologies: ["Java", "MySQL", "JavaFX", "MVC Architecture"],
+      title: "Personal Website",
+      description: "This portfolio website showcasing my skills and projects using modern web technologies.",
+      technologies: ["HTML", "CSS", "JavaScript"],
       status: "Completed",
-      category: "Enterprise Software"
-    },
-    {
-      id: 4,
-      title: "Gaming Tournament Organizer",
-      description: "Web platform for organizing and managing esports tournaments with real-time brackets and live scoring.",
-      technologies: ["Node.js", "Express", "MongoDB", "Socket.io"],
-      status: "Planning",
-      category: "Web Application"
+      codeLink: "#",
+      demoLink: "#"
     }
   ]
 
   return (
     <section id="projects" className={`section ${isVisible.projects ? 'animate-in' : ''}`}>
       <div className="container">
-        <h2 className="section-title">My Projects</h2>
+        <h2 className="section-title">Projects</h2>
+        <p className="section-subtitle">A showcase of my programming projects and learning journey</p>
         <div className="projects-grid">
           {projects.map((project, index) => (
             <div key={project.id} className="project-card" style={{animationDelay: `${index * 0.2}s`}}>
               <div className="project-header">
-                <div className="project-icon">
-                  <svg viewBox="0 0 50 50" className="code-icon">
-                    <rect x="5" y="10" width="40" height="30" rx="3" className="terminal-bg"/>
-                    <circle cx="12" cy="18" r="2" className="terminal-btn close"/>
-                    <circle cx="20" cy="18" r="2" className="terminal-btn minimize"/>
-                    <circle cx="28" cy="18" r="2" className="terminal-btn maximize"/>
-                    <path d="M10 25 L15 30 L10 35" className="code-bracket"/>
-                    <path d="M40 25 L35 30 L40 35" className="code-bracket"/>
-                    <line x1="20" y1="28" x2="30" y2="32" className="code-line"/>
-                  </svg>
-                </div>
-                <div className="project-status">
-                  <span className={`status-badge ${project.status.toLowerCase().replace(' ', '-')}`}>
-                    {project.status}
-                  </span>
-                </div>
-              </div>
-              <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
-                <p className="project-category">{project.category}</p>
-                <p className="project-description">{project.description}</p>
-                <div className="project-technologies">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span key={techIndex} className="tech-tag">{tech}</span>
-                  ))}
-                </div>
+                <span className={`status-badge ${project.status.toLowerCase().replace(' ', '-')}`}>
+                  {project.status}
+                </span>
+              </div>
+              <p className="project-description">{project.description}</p>
+              <div className="project-technologies">
+                {project.technologies.map((tech, techIndex) => (
+                  <span key={techIndex} className="tech-tag">{tech}</span>
+                ))}
+              </div>
+              <div className="project-actions">
+                <a href={project.codeLink} className="project-btn code-btn">
+                  <svg viewBox="0 0 24 24" className="btn-icon">
+                    <path fill="currentColor" d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                  </svg>
+                  Code
+                </a>
+                <a href={project.demoLink} className="project-btn demo-btn">
+                  <svg viewBox="0 0 24 24" className="btn-icon">
+                    <path fill="currentColor" d="M8 5v14l11-7z"/>
+                  </svg>
+                  Demo
+                </a>
               </div>
             </div>
           ))}
+        </div>
+        <div className="projects-footer">
+          <p className="more-text">More projects coming soon...</p>
+          <button className="view-all-btn">View All Projects</button>
         </div>
       </div>
     </section>

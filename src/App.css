@@ -1261,7 +1261,14 @@ body {
 
 .footer-social {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
+  max-width: 200px;
+}
+
+.footer-social a:nth-child(n+4) {
+  margin-top: 0.5rem;
 }
 
 .social-link {

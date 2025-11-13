@@ -1,9 +1,15 @@
 :root {
-  --color-purple-primary: #0080ff;
-  --color-purple-light: #0099ff;
-  --color-purple-lighter: #00b3ff;
-  --color-black: #000000;
-  --color-white: #ffffff;
+  --color-primary: #1e40af;
+  --color-primary-light: #3b82f6;
+  --color-primary-lighter: #60a5fa;
+  --color-accent: #10b981;
+  --color-accent-hover: #059669;
+  --color-background: #0f172a;
+  --color-surface: #1e293b;
+  --color-surface-light: #334155;
+  --color-text: #f8fafc;
+  --color-text-muted: #cbd5e1;
+  --color-border: #475569;
 }
 
 * {
@@ -14,8 +20,8 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #000000;
-  color: #ffffff;
+  background: var(--color-background);
+  color: var(--color-text);
   overflow-x: hidden;
 }
 
@@ -28,11 +34,11 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(15, 23, 42, 0.95);
   backdrop-filter: blur(10px);
   z-index: 1000;
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(0, 128, 255, 0.3);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .nav {
@@ -50,7 +56,7 @@ body {
   gap: 1rem;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #0080ff;
+  color: var(--color-primary-light);
 }
 
 .logo-icon {
@@ -84,14 +90,14 @@ body {
 }
 
 .nav-links a {
-  color: #ffffff;
+  color: var(--color-text);
   text-decoration: none;
   transition: color 0.3s ease;
   position: relative;
 }
 
 .nav-links a:hover {
-  color: #0080ff;
+  color: var(--color-primary-light);
 }
 
 .nav-links a::after {
@@ -101,7 +107,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: #0080ff;
+  background: var(--color-primary-light);
   transition: width 0.3s ease;
 }
 
@@ -141,7 +147,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-black);
+  background: var(--color-background);
   position: relative;
   overflow: hidden;
   padding: 80px 2rem 2rem;
@@ -162,8 +168,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(0, 128, 255, 0.2), transparent 50%),
-              radial-gradient(circle at 70% 50%, rgba(0, 153, 255, 0.15), transparent 50%);
+  background: radial-gradient(circle at 30% 50%, rgba(30, 64, 175, 0.15), transparent 50%),
+              radial-gradient(circle at 70% 50%, rgba(16, 185, 129, 0.1), transparent 50%);
   pointer-events: none;
 }
 
@@ -187,15 +193,15 @@ body {
   height: 200px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #0080ff;
-  box-shadow: 0 0 30px rgba(0, 128, 255, 0.5);
+  border: 3px solid var(--color-primary-light);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
   transition: all 0.3s ease;
 }
 
 .hero-image-container:hover {
   transform: scale(1.05);
-  border-color: #0099ff;
-  box-shadow: 0 0 40px rgba(0, 128, 255, 0.7);
+  border-color: var(--color-primary-lighter);
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
 }
 
 .hero-profile-image {
@@ -221,7 +227,7 @@ body {
 
 .hero-subtitle {
   font-size: 1.125rem;
-  color: var(--color-purple-light);
+  color: var(--color-text-muted);
   line-height: 1.6;
   margin: 0;
 }
@@ -238,14 +244,14 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--color-purple-lighter);
+  color: var(--color-text-muted);
   font-size: 0.95rem;
 }
 
 .detail-icon {
   width: 20px;
   height: 20px;
-  color: var(--color-purple-primary);
+  color: var(--color-accent);
 }
 
 /* Section Styles */
@@ -282,7 +288,7 @@ body {
   transform: translateX(-50%);
   width: 100px;
   height: 3px;
-  background: linear-gradient(90deg, #0080ff, #00b3ff);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
   border-radius: 2px;
 }
 
@@ -335,8 +341,8 @@ body {
 }
 
 .skill-card {
-  background: #000000;
-  border: 1px solid rgba(0, 128, 255, 0.3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
@@ -355,7 +361,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 128, 255, 0.08), rgba(0, 179, 255, 0.05));
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(16, 185, 129, 0.05));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -366,8 +372,8 @@ body {
 
 .skill-card:hover {
   transform: translateY(-10px);
-  border-color: #0080ff;
-  box-shadow: 0 20px 40px rgba(0, 128, 255, 0.3);
+  border-color: var(--color-primary-light);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
 }
 
 @keyframes slideUp {
@@ -600,8 +606,8 @@ body {
 }
 
 .project-card {
-  background: #000000;
-  border: 1px solid rgba(0, 128, 255, 0.3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 1.75rem;
   transition: all 0.3s ease;
@@ -615,8 +621,8 @@ body {
 
 .project-card:hover {
   transform: translateY(-5px);
-  border-color: #0080ff;
-  box-shadow: 0 10px 30px rgba(0, 128, 255, 0.3);
+  border-color: var(--color-primary-light);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
 }
 
 .project-header {
@@ -716,26 +722,26 @@ body {
 
 .code-btn {
   background: transparent;
-  color: #e4e6eb;
-  border: 1px solid #4a5568;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
 }
 
 .code-btn:hover {
-  background: rgba(0, 128, 255, 0.1);
-  border-color: #0080ff;
-  color: #0080ff;
+  background: rgba(59, 130, 246, 0.1);
+  border-color: var(--color-primary-light);
+  color: var(--color-primary-light);
 }
 
 .demo-btn {
-  background: transparent;
-  color: #ffffff;
-  border: 1px solid rgba(0, 128, 255, 0.3);
+  background: var(--color-accent);
+  color: var(--color-text);
+  border: 1px solid var(--color-accent);
 }
 
 .demo-btn:hover {
-  background: rgba(0, 128, 255, 0.1);
-  border-color: #0080ff;
-  color: #0080ff;
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  color: var(--color-text);
 }
 
 .projects-footer {
@@ -1138,11 +1144,11 @@ body {
 }
 
 .submit-btn {
-  background: #6c7aff;
+  background: var(--color-accent);
   border: none;
   border-radius: 8px;
   padding: 1rem 2rem;
-  color: #ffffff;
+  color: var(--color-text);
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -1156,8 +1162,8 @@ body {
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(108, 122, 255, 0.3);
-  background: #5a68e6;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+  background: var(--color-accent-hover);
 }
 
 .send-icon {
@@ -1168,9 +1174,9 @@ body {
 
 /* Footer */
 .footer {
-  background: #000000;
+  background: var(--color-background);
   padding: 3rem 0 1.5rem;
-  border-top: 1px solid rgba(0, 128, 255, 0.3);
+  border-top: 1px solid var(--color-border);
   position: relative;
 }
 
@@ -1181,7 +1187,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 128, 255, 0.03), rgba(0, 179, 255, 0.02));
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.03), rgba(16, 185, 129, 0.02));
   pointer-events: none;
 }
 
@@ -1202,9 +1208,9 @@ body {
 .footer-name {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #0080ff;
+  color: var(--color-primary-light);
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, #0080ff, #00b3ff);
+  background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1238,7 +1244,7 @@ body {
 }
 
 .footer-links a:hover {
-  color: #0080ff;
+  color: var(--color-primary-light);
   transform: translateX(5px);
 }
 
@@ -1253,29 +1259,29 @@ body {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: rgba(0, 128, 255, 0.1);
-  border: 1px solid rgba(0, 128, 255, 0.3);
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .social-link:hover {
-  background: rgba(0, 128, 255, 0.2);
-  border-color: #0080ff;
+  background: var(--color-primary-light);
+  border-color: var(--color-primary-light);
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 128, 255, 0.3);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
 }
 
 .social-icon {
   width: 20px;
   height: 20px;
-  fill: #0080ff;
+  fill: var(--color-primary-light);
   transition: fill 0.3s ease;
 }
 
 .social-link:hover .social-icon {
-  fill: #ffffff;
+  fill: var(--color-text);
 }
 
 .footer-bottom {

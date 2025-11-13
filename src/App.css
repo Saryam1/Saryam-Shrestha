@@ -306,23 +306,6 @@ body {
 /* About Section */
 #about {
   position: relative;
-  overflow: hidden;
-}
-
-.about-bg-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  opacity: 0.4;
-  z-index: 0;
-}
-
-.about-bg-svg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .about-content {
@@ -331,8 +314,6 @@ body {
   text-align: center;
   font-size: 1.1rem;
   line-height: 1.8;
-  position: relative;
-  z-index: 1;
 }
 
 .about-content p {

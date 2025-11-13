@@ -51,7 +51,7 @@ body {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--color-primary);
+  color: #ffffff;
 }
 
 .nav-links {
@@ -139,6 +139,16 @@ body {
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid #ffffff;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .hero-profile-image {
@@ -639,7 +649,7 @@ body {
 }
 
 .form-group label {
-  color: var(--color-primary);
+  color: #ffffff;
   font-weight: 500;
   font-size: 0.95rem;
 }
@@ -717,7 +727,7 @@ body {
 .footer-name {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #ffffff;
   margin-bottom: 1rem;
 }
 

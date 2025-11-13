@@ -925,45 +925,80 @@ body {
 .gallery-grid-simple {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  max-width: 1200px;
+  gap: 2rem;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .gallery-item-simple {
   opacity: 0;
-  transform: scale(0.9);
-  animation: galleryAppear 0.6s ease forwards;
+  transform: scale(0.95);
+  animation: galleryAppear 0.7s ease forwards;
   overflow: hidden;
-  border-radius: 15px;
-  border: 1px solid rgba(0, 245, 255, 0.2);
-  transition: all 0.4s ease;
-  aspect-ratio: 1;
+  border-radius: 12px;
+  background: rgba(20, 20, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  aspect-ratio: 4 / 3;
+  position: relative;
 }
 
 .gallery-item-simple:hover {
-  transform: translateY(-10px) scale(1.02);
-  border-color: #00f5ff;
-  box-shadow: 0 20px 40px rgba(0, 245, 255, 0.3);
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4), 
+              0 0 0 1px rgba(0, 245, 255, 0.1);
 }
 
 .gallery-image-simple {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .gallery-grid-simple {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+.gallery-item-simple:hover .gallery-image-simple {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-item-simple,
+  .gallery-image-simple {
+    transition: none;
+    animation: none;
+  }
+  
+  .gallery-item-simple:hover {
+    transform: none;
+  }
+  
+  .gallery-item-simple:hover .gallery-image-simple {
+    transform: none;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 968px) {
+  .gallery-grid-simple {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
   .gallery-grid-simple {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .gallery-item-simple {
+    aspect-ratio: 16 / 9;
   }
 }
 

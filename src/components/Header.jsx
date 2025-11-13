@@ -16,7 +16,9 @@ export default function Header() {
     <header className="header">
       <nav className="nav">
         <div className="logo">
-          <span>Saryam Shrestha</span>
+          <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <span>Saryam Shrestha</span>
+          </a>
         </div>
         <div className={`mobile-menu-toggle ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
           <div className="hamburger-line"></div>

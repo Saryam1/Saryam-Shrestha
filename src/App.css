@@ -324,7 +324,7 @@ body {
 .passion-text h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: var(--color-primary);
+  color: #ffffff;
 }
 
 .passion-text p {
@@ -342,7 +342,7 @@ body {
 }
 
 .passion-item h4 {
-  color: var(--color-primary);
+  color: #ffffff;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
 }
@@ -366,12 +366,12 @@ body {
   display: block;
   font-size: 2rem;
   font-weight: bold;
-  color: var(--color-primary);
+  color: #ffffff;
 }
 
 .stat-label {
   font-size: 0.9rem;
-  color: var(--color-text-muted);
+  color: #ffffff;
 }
 
 /* Projects Section */

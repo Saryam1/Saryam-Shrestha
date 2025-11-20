@@ -80,7 +80,7 @@ body {
 .hamburger-line {
   width: 25px;
   height: 3px;
-  background: var(--color-primary);
+  background: white;
   transition: all 0.3s ease;
 }
 
